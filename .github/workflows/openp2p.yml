@@ -1,4 +1,4 @@
-name: Build and push
+name: openp2p
 
 on:
   push:
