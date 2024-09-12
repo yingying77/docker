@@ -1,0 +1,1 @@
+FROM openp2pcn/openp2p-client:latest
