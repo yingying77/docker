@@ -13,10 +13,12 @@ RUN 	 wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_24071
 	&& tar xzf ChmlFrp-0.51.2_240715_linux_amd64.tar.gz \
 	&& cd ChmlFrp-0.51.2_240715_linux_amd64 \
 	&& mkdir /frp \
-	&& mv frpc /frp \
+	&& mv frpc / \
+	&& mv frpc.ini /frp \
 	&& cd .. \
-	&& rm -rf ChmlFrp*
+	&& rm -rf ChmlFrp* \
+	&& echo "hello world" > /frp/greeting
 
 VOLUME /frp
 
-CMD /frp/frpc -c ./config/frpc.ini
+CMD /frpc -c ./frp/frpc.ini
