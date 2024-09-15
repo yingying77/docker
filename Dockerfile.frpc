@@ -9,7 +9,7 @@ RUN apk add --no-cache tzdata \
     && ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone
 
-RUN 	 wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_240715_linux_amd64.tar.gz \
+RUN wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_240715_linux_amd64.tar.gz \
 	&& tar xzf ChmlFrp-0.51.2_240715_linux_amd64.tar.gz \
 	&& cd ChmlFrp-0.51.2_240715_linux_amd64 \
 	&& mkdir /frp \
@@ -21,4 +21,4 @@ RUN 	 wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_24071
 
 VOLUME /frp
 
-CMD /frpc -c ./frp/frpc.ini
+CMD ./frpc -c ./frp/frpc.ini
