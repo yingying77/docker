@@ -19,4 +19,4 @@ RUN 	 wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_24071
 
 VOLUME /frp
 
-CMD /frpc
+CMD /frp/frpc
