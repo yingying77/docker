@@ -16,8 +16,8 @@ RUN wget --no-check-certificate https://www.chmlfrp.cn/dw/ChmlFrp-0.51.2_240715_
 	&& mv frpc / \
 	&& mv frpc.ini /frp \
 	&& cd .. \
-	&& rm -rf ChmlFrp* \
-	&& echo "hello world" > /frp/greeting
+	&& rm -rf ChmlFrp* 
+RUN echo "hello world" > /frp/greeting
 
 VOLUME /frp
 
