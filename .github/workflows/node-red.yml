@@ -16,6 +16,12 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: check file
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            Dockerfile.nodered
+          sparse-checkout-cone-mode: false
       - name: Checkout
         uses: actions/checkout@v4
         with:
