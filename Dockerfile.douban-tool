@@ -1,1 +1,1 @@
-FROM zack357/douban-tool
+FROM zack357/douban-tool:NoHardlink
